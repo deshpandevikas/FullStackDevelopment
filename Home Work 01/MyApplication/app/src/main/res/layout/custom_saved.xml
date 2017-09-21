@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/customLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/circle_blue"
+            android:id="@+id/ivReadFlag" />
+
+        <LinearLayout
+            android:orientation="vertical">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSenderName" />
+
+                <TextView
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_toLeftOf="@+id/tvTimeSent"
+                    android:layout_marginRight="3dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDateSent" />
+
+                <TextView
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTimeSent" />
+        </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text=""
+                        android:textSize="12sp"
+                        android:layout_weight="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMsgSummary" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="220dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/ivLockFlag" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </TableRow>
+    <View android:background="#000000"
+        android:layout_marginTop="5dp"
+        android:layout_width = "match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>
