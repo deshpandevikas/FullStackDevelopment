@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" ng-app="loginapp">
+<script>
+
+function addSubmitButton()
+{
+	var quiz = document.getElementById('quiz');
+
+	var div = document.createElement('div');
+	div.setAttribute('class','text-center');
+
+	var newInput1 = document.createElement('input');
+    newInput1.type = 'submit';
+	newInput1.setAttribute('class','btn btn-info btn-fill btn-wd');
+
+	if(newInput1)
+	{
+		quiz.appendChild(newInput1);
+	}
+}
+
+</script>
+
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Create Survey</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controller/createsurveyController.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
+  <script src="js/routes/routes.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
+  <script src="bower_components/assets/angular-ui-util/ui-utils.min.js" type="text/javascript"></script>
+
+
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+<body  ng-controller ="createsurveyController" >
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <p  class="simple-text">
+                    Create User
+                </p>
+            </div>
+
+				<ul class="nav">
+                        <li class="active">
+                                <a href="listusersforstudy.html">
+                                    <i class="ti-view-list-alt"></i>
+                                    <p>Users in Study</p>
+                                </a>
+                            </li>
+            
+                                            <li class="active">
+                                <a href="createusersforstudy.html">
+                                    <i class="ti-user"></i>
+                                    <p>Create Users For Study  {{studyname}}</p>
+                                </a>
+                            </li>
+                                    
+                                 
+                            <li class ="active">
+                                <a href="createinformation.html">
+                                    <i class="ti-view-list-alt"></i>
+                                        <p>Create Information question</p>
+                                        </a>
+                                    </li>
+                                                   
+                                         
+                        <li class ="active">
+                                <a href="createmcq.html">
+                                    <i class="ti-view-list-alt"></i>
+                                        <p>Create MCQ question</p>
+                                        </a>
+                                    </li>
+    
+                                    <li class="active">
+                                            <a href="listquestionsforstudy.html">
+                                                <i class="ti-user"></i>
+                                                <p>list of questions for study</p>
+                                            </a>
+                                        </li> 
+                                        
+                                        
+                                        <li class="active">
+                                                <a href="createsurvey.html">
+                                                    <i class="ti-user"></i>
+                                                    <p>Create Survey</p>
+                                                </a>
+                                            </li>
+                                            
+                                              
+                                        <li class="active">
+                                                <a href="listsurveysforstudy.html">
+                                                    <i class="ti-user"></i>
+                                                    <p>List of Surveys</p>
+                                                </a>
+                                            </li>  
+                        
+                        <li class="active">
+                                <a href="" ng-click="logout()">
+                                        <i class="ti-user"></i>
+                                        <p>Log Out</p>
+                                </a>
+              </li>
+                
+
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="form.html">Create Survey</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                <a href="adminlogin.html">
+								<p>Log Out</p></a>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-8 col-md-7">
+                        <div class="card">
+                            <div class="header">
+                                    <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Survey Name</label>
+                                                    <input type="text" required ng-model = "surname"  class="form-control border-input" placeholder="Survey Name">
+                                                </div>
+                                   </div>
+
+
+                            </div>
+                            <div class="content">
+                                <form  id="quiz" ng-submit="submitSurvey()"  >
+
+                                        <div ng-repeat="sque in surQuestions" class="row">
+                                        <div class="jumbotron">
+                                                <button style="float:right " type="button" class="btn btn-danger" ng-click="removerQuestion(sque)">x</button>
+                                                  <input type ="text" class="form-control" ng-model = "sque.questionname" placeholder="Enter Question" />
+                                                  </br>
+                                                 </br>
+                                                  <select class="form-control" ng-model="sque.qType" >
+                                                    <option value="1">Open text</option>
+                                                    <option value="2">Multiple choice</option>
+                                                    <option value="3">Likert Scale</option>
+                                                    
+                                                  </select>
+                                                </br>
+
+
+
+                                                <div class="row">
+
+                                                        <div class="col-md-4">
+
+                                                  <input type ="text" class="form-control" ng-if="sque.qType == 2" ng-model = "sque.numberofoptions" placeholder="Enter Options" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                        
+                                                 <button type ="text" class="form-control" ng-click="addMoptions(sque)" ng-if="sque.qType == 2">Select Choices</button>
+                                                 </div>
+
+
+                                                                                                        
+                                                
+                                                </div>
+
+
+
+
+                                                <div class="row" ng-if="sque.qType == 2" ng-repeat="peo in sque.options">
+
+                                                    
+                                                           <div class="col-md-6">
+
+                                                        <input type="text" class="form-control border-input"  ng-model="peo.txt" required placeholder="Enter Option">
+                                                        
+                                                           </div>
+
+
+                                                </div>
+  
+                                                </div>
+
+                                                </div>
+
+
+                                        
+                                    
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                            <div class="text-center">
+                                                <button type="button" ng-click="addQuestion()" class="btn btn-info btn-fill btn-wd">Add Question</button>
+                                            </div>
+                                            </div>
+
+                                         </div>    
+                                    
+                                    
+
+
+
+                                       
+
+									</br>
+									<div class="text-center">
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Submit Survey</button>
+                                    </div>
+
+                               
+		
+                                </form>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+			</div>
+
+
+
+      <div class="alert alert-danger" ng-if="error == 'error'">
+          <strong> {{status}} </strong>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+</body>
+
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+
+	<script src="assets/js/chartist.min.js"></script>
+
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script src="assets/js/paper-dashboard.js"></script>
+
+	<script src="assets/js/demo.js"></script>
+
+</html>

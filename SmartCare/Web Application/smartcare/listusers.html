@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" ng-app="loginapp">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/service/services.js"></script>
+	<script src="js/controller/userscontroller.js"></script>
+	<script src="js/routes/routes.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-cookies.js"></script>
+	<script src="bower_components/assets/angular-ui-util/ui-utils.min.js" type="text/javascript"></script>
+
+
+	<title>List Users </title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+<body ng-controller = 'usersController' >
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <p class="simple-text">
+                   Admin Home
+                </p>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="listusers.html">
+                        <i class="ti-view-list-alt"></i>
+                        <p>List of Users</p>
+                    </a>
+                </li>
+
+								<li class="active">
+                    <a href="createuser.html">
+                        <i class="ti-user"></i>
+                        <p>Create Account</p>
+                    </a>
+                </li>
+
+				
+                <li class="active">
+                        <a href="createstudy.html">
+                            <i class="ti-user"></i>
+                            <p>Create Study</p>
+                        </a>
+                    </li>
+    
+                    <li class="active">
+                            <a href="liststudies.html">
+                                <i class="ti-user"></i>
+                                <p>List of Studies</p>
+                            </a>
+                        </li>
+    
+
+								<li class="active">
+ 									 <a href="" ng-click="logout()">
+ 											 <i class="ti-user"></i>
+ 											 <p>Log Out</p>
+ 									 </a>
+ 							 </li>
+
+
+
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="listusers.html">List of Accounts</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="" ng-click="logout()">
+                                <i class="ti-user"></i>
+                                <p>Log Out</p>
+                        </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Create Patient</h4>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-striped">
+                                    <thead>
+																			<th>Email</th>
+																			<th>First Name</th>
+																			<th>Last Name</th>
+																			<th>Password</th>
+																			<th>Age</th>
+
+                                    </thead>
+                                    <tbody>
+																			<tr ng-repeat="person in persons">
+												                  <td>{{person.uemail}}</td>
+												                  <td>{{person.fname}}</td>
+												                  <td>{{person.lname}}</td>
+												                  <td>{{person.pwd}}</td>
+												                  <td>{{person.age}}</td>
+												             
+												              </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+</body>
+
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+
+	<script src="assets/js/chartist.min.js"></script>
+
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script src="assets/js/paper-dashboard.js"></script>
+
+	<script src="assets/js/demo.js"></script>
+
+
+</html>

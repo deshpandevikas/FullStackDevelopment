@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "479798665238",
+    "firebase_url": "https://advmadhw5-186018.firebaseio.com",
+    "project_id": "advmadhw5-186018",
+    "storage_bucket": "advmadhw5-186018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479798665238:android:b78382e40e248e9b",
+        "android_client_info": {
+          "package_name": "com.raywenderlich.camelot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479798665238-u9h5bde1gjqgqgbmipfar2cdri6qfbq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuvAFCpwfJm-U1g_d-anDcH5UOGoc9rwc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

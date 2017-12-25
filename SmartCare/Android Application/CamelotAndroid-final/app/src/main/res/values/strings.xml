@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SmartCare!</string>
+
+    <string name="survey">Survey</string>
+    <string name="audiotask">Audio Task</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="to">To:</string>
+    <string name="login">Log In</string>
+    <string name="newuser">New User?</string>
+    <string name="signup">Sign Up</string>
+    <string name="cancel">Cancel</string>
+    <string name="email">Email</string>
+    <string name="uname">User Name</string>
+    <string name="pass">Password</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="ema">Email</string>
+    <string name="choospass">Choose Password</string>
+    <string name="reppass">Repeat Password</string>
+    <string name="title_activity_sign_up">SignUp</string>
+
+    <string name="title_activity_list_of_studies">ListOfStudies</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
